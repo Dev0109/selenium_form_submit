@@ -1,4 +1,4 @@
-from browser impor browser_bot_painting, browser_bot_windows, browser_bot_bathroom_remodel, browser_bot_kitchen_remodel, browser_bot_heating_cooling
+from browser import browser_bot_painting, browser_bot_windows, browser_bot_bathroom_remodel, browser_bot_kitchen_remodel, browser_bot_heating_cooling, browser_bot_roofing, browser_bot_siding, browser_bot_home_security, browser_bot_solar
 from utilities import *
 
 file_path = "file2.csv"
@@ -16,6 +16,10 @@ def main_loop():
         outcome_bathroom_remodel =browser_bot_bathroom_remodel(row)
         outcome_kitchen_remodel = browser_bot_kitchen_remodel(row)
         outcome_heating_cooling = browser_bot_heating_cooling(row)
+        outcome_roofing = browser_bot_roofing(row)
+        outcome_siding = browser_bot_siding(row)
+        outcome_home_security = browser_bot_home_security(row)
+        outcome_solar = browser_bot_solar(row)
         success_count, unsuc_count = success_counter(outcome_painting, success_count, unsuc_count)
     report_summary(success_count, unsuc_count)
     print(report_summary)
