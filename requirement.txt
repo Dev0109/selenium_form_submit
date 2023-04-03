@@ -1,0 +1,53 @@
+Selenium Project Requirements
+
+----- https://upgrades4myhome.com/ -----
+
+-- Windows
+Replace
+randint(3,12)
+Residential - Yes
+Homeowner - Yes
+Within 1 Week
+
+
+-- Bathroom Remodel
+Residential - Yes
+Homeowner - Yes
+1 or 2 weeks
+
+-- Kitchen Remodel
+Residential - Yes
+Homeowner - Yes
+1 or 2 weeks
+
+
+-- Painting
+Full Exterior
+Residential - Yes
+Homeowner - Yes
+1 or 2 weeks
+
+
+-- Heating & Cooling
+New/Replacement
+Cooling
+Central AC
+Residential - Yes
+Homeowner - Yes
+1 or 2 weeks
+
+
+-- Heating & Cooling
+New/Replacement
+Heating & Cooling
+Central AC
+Residential - Yes
+Homeowner - Yes
+1 or 2 weeks
+
+
+------ https://ready4solar.com/ -------
+Yes, I own my home
+Approximate shade: No Shade
+Monthly Bill: $200 - 300
+Electric Company: Other
