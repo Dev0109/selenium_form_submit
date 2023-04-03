@@ -1,4 +1,4 @@
-from browser import browser_bot
+from browser import browser_bot_painting
 from utilities import *
 
 file_path = "file2.csv"
@@ -11,7 +11,7 @@ def main_loop():
     for row in data:
         index += 1
         print(f"#{index}:  {row}")
-        outcome = browser_bot(row)
+        outcome = browser_bot_painting(row)
         success_count, unsuc_count = success_counter(outcome, success_count, unsuc_count)
     report_summary(success_count, unsuc_count)
     print(report_summary)

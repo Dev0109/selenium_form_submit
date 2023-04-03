@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #TODO: replace time elements with a variable for click, type, etc and have a random range
 
 
-def browser_bot(row):
+def browser_bot_painting(row):
     first_name = row[0]
     last_name = row[1]
     email_address = row[9]
@@ -36,7 +36,7 @@ def browser_bot(row):
 
         time.sleep(4)
 
-        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="6"][item-prod="Roofing"]')
+        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Painting"]')
 
         # Click the search button
         element.click()
@@ -164,12 +164,13 @@ def browser_bot(row):
         state_select.select_by_value(state)
 
         # Zipcode is already defaulted from prior input
-
+        
         # Locate the Submit Button
         button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//div[@data-slick-index="5"]//button[@id="btn-zip"]'))
+            EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[4]/div/div/div/div/div/form/div[2]/div/div/div[6]/button'))
         )
         button.click()
+        print("ok")
         time.sleep(3)
 
 
