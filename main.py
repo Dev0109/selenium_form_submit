@@ -1,4 +1,4 @@
-from browser import browser_bot_painting
+from browser import browser_bot_painting, browser_bot_windows, browser_bot_bathroom_remodel, browser_bot_kitchen_remodel
 from utilities import *
 
 file_path = "file2.csv"
@@ -11,8 +11,12 @@ def main_loop():
     for row in data:
         index += 1
         print(f"#{index}:  {row}")
-        outcome = browser_bot_painting(row)
-        success_count, unsuc_count = success_counter(outcome, success_count, unsuc_count)
+        outcome_painting = browser_bot_painting(row)
+        outcome_windows = browser_bot_windows(row)
+        outcome_bathroom_remodel =browser_bot_bathroom_remodel(row)
+        outcome_kitchen_remodel = browser_bot_kitchen_remodel(row)
+        outcome_heating_cooling = browser_bot_heating_cooling(row)
+        success_count, unsuc_count = success_counter(outcome_painting, success_count, unsuc_count)
     report_summary(success_count, unsuc_count)
     print(report_summary)
     return
