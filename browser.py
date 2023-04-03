@@ -435,7 +435,7 @@ def browser_bot_bathroom_remodel(row):
 
         time.sleep(4)
 
-        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Painting"]')
+        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Bathroom Remodel"]')
 
         # Click the search button
         element.click()
@@ -630,7 +630,7 @@ def browser_bot_kitchen_remodel(row):
 
         time.sleep(4)
 
-        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Painting"]')
+        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Kitchen Remodel"]')
 
         # Click the search button
         element.click()
@@ -825,7 +825,7 @@ def browser_bot_heating_cooling(row):
 
         time.sleep(4)
 
-        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Painting"]')
+        element = driver.find_element(By.CSS_SELECTOR, 'a[data-target="#zipcodeBox"][item-val="1"][item-prod="Heating and Cooling"]')
 
         # Click the search button
         element.click()
@@ -869,6 +869,35 @@ def browser_bot_heating_cooling(row):
         # )
         # button.click()
         # time.sleep(3)
+
+        #Locate the Server type New/Replacement and click it
+        input_element = driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div/div/div/form/div[2]/div/div/div[1]/div/span[2]/input')
+        input_element.click()
+        time.sleep(1.23)
+
+        # Locate the Residential Yes radio button and click it
+        input_element = driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div/div/div/form/div[2]/div/div/div[2]/div/span[1]/input')
+        input_element.click()
+        time.sleep(1.23)
+
+        # Locate the Continue Button
+        button = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, '//div[@data-slick-index="1"]//button[@id="btn-zip"]'))
+        )
+        button.click()
+        time.sleep(3)
+
+        # Locate the HVAC Yes radio button and click it
+        input_element = driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div/div/div/form/div[2]/div/div/div[3]/div/span[1]/input')
+        input_element.click()
+        time.sleep(1.23)
+
+        # Locate the Continue Button
+        button = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, '//div[@data-slick-index="2"]//button[@id="btn-zip"]'))
+        )
+        button.click()
+        time.sleep(3)
 
         # Locate the Residential Yes radio button and click it
         input_element = driver.find_element(By.ID, 'residential1')
